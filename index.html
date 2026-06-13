@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>project01</title>
     <style>
         * {
             margin: 0;
@@ -26,6 +26,28 @@
         <source src="./img/azet_02.mp4" type="video/mp4">
     </video>
     <img src="./img/azet_03.jpg" alt="">
+
+    <script>
+        let isScrolling = false;
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            if (isScrolling) return;
+            isScrolling = true;
+
+            const move = e.deltaY > 0 ? 900 : -900;
+
+            window.scrollBy({
+                top: move,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 500);
+        }, { passive: false });
+    </script>
 </body>
 
 </html>
