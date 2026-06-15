@@ -17,15 +17,39 @@
             width: 100%;
             height: auto;
         }
+
+        .mo{
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mo{
+                display: block;
+            }
+
+            .pc{
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <img src="./img/azet_01.jpg" alt="">
-    <video autoplay muted loop playsinline>
-        <source src="./img/azet_02.mp4" type="video/mp4">
-    </video>
-    <img src="./img/azet_03.jpg" alt="">
+    <div class="pc">
+        <img src="./img/azet_01.jpg" alt="">
+        <video autoplay muted loop playsinline>
+            <source src="./img/azet_02.mp4" type="video/mp4">
+        </video>
+        <img src="./img/azet_03.jpg" alt="">
+    </div>
+    
+    <div class="mo">
+        <img src="./img/azet_mo_01.jpg" alt="">
+        <video autoplay muted loop playsinline>
+            <source src="./img/azet_mo_02.mp4" type="video/mp4">
+        </video>
+        <img src="./img/azet_mo_03.jpg" alt="">
+    </div>
 
     <script>
         if (window.innerWidth > 768) {
